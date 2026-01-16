@@ -51,3 +51,38 @@ express-redis-starter/
 ├── package.json
 ├── README.md
 └── server.js
+
+
+# ⚙️ Getting Started
+
+# 1️⃣ Clone the Repository
+git clone https://github.com/your-username/express-redis-starter.git
+cd express-redis-starter
+
+# 2️⃣ Install Dependencies
+npm install
+
+# 3️⃣ Setup Environment Variables
+
+# Create a .env file using the example
+cp .env.example .env
+
+# Add your Redis and database configuration
+PORT=5000
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+
+# 4️⃣ Start Redis Server
+
+# Using Docker
+docker run -d -p 6379:6379 redis
+
+# Or locally
+redis-server
+
+# 5️⃣ Run the Server
+npm run dev
+
+# Server will be running at
+http://localhost:5000
