@@ -72,7 +72,7 @@ REDIS_PORT=6379
 REDIS_PASSWORD=
 ```
 
-4️⃣ Start Redis
+## 4️⃣ Start Redis
 Using Docker:
 ```bash
 docker run -d -p 6379:6379 redis
@@ -82,7 +82,7 @@ Or locally:
 redis-server
 ```
 
-5️⃣ Run the server
+## 5️⃣ Run the server
 ```bash
 npm run dev
 ```
