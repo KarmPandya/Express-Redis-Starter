@@ -1,106 +1,76 @@
-# =============================================================================
+# ─────────────────────────────────────────────────────────────
 # 🚀 Express Redis Starter
-# =============================================================================
-# A production-ready Express.js backend project demonstrating how to integrate
-# Redis for caching, session management, and performance optimization.
-#
-# This repository showcases real-world backend patterns used in scalable
-# applications.
-# =============================================================================
+# ─────────────────────────────────────────────────────────────
+# Express.js backend with Redis for caching, sessions,
+# rate limiting, and performance optimization.
+# ─────────────────────────────────────────────────────────────
 
 
-# -----------------------------------------------------------------------------
+# ─────────────────────
 # 📌 Features
-# -----------------------------------------------------------------------------
-# ⚡ Redis Caching for faster API responses
-# 🧠 Cache Invalidation strategies
-# 🔐 Session Management with Redis
-# 🚦 Rate Limiting using Redis
-# 📦 Clean & modular Express architecture
-# 🌱 Environment-based configuration
-# 🛡️ Production-ready middleware setup
+# ─────────────────────
+# • Redis-based API caching
+# • Cache invalidation strategies
+# • Session storage with Redis
+# • Distributed rate limiting
+# • Clean, modular Express setup
 
 
-# -----------------------------------------------------------------------------
+# ─────────────────────
 # 🛠️ Tech Stack
-# -----------------------------------------------------------------------------
-# - Node.js
-# - Express.js
-# - Redis
-# - MongoDB / PostgreSQL (optional)
-# - dotenv
-# - ioredis / redis
-# - express-rate-limit
+# ─────────────────────
+# Node.js | Express.js | Redis
+# MongoDB / PostgreSQL (optional)
+# dotenv | ioredis | express-rate-limit
 
 
-# -----------------------------------------------------------------------------
+# ─────────────────────
 # 📂 Project Structure
-# -----------------------------------------------------------------------------
+# ─────────────────────
 express-redis-starter/
-│
-├── src/
-│   ├── config/
-│   │   ├── redis.js
-│   │   └── db.js
-│   │
-│   ├── controllers/
-│   ├── routes/
-│   ├── middlewares/
-│   │   ├── cacheMiddleware.js
-│   │   └── rateLimiter.js
-│   │
-│   ├── services/
-│   ├── utils/
-│   └── app.js
-│
-├── .env.example
-├── .gitignore
-├── package.json
-├── README.md
-└── server.js
+├─ src/
+│  ├─ config/
+│  │  ├─ redis.js
+│  │  └─ db.js
+│  ├─ controllers/
+│  ├─ routes/
+│  ├─ middlewares/
+│  │  ├─ cache.middleware.js
+│  │  └─ rateLimiter.middleware.js
+│  └─ app.js
+├─ .env.example
+├─ .gitignore
+├─ package.json
+├─ server.js
+└─ README.md
 
 
-# -----------------------------------------------------------------------------
+# ─────────────────────
 # ⚙️ Getting Started
-# -----------------------------------------------------------------------------
+# ─────────────────────
 
-# 1️⃣ Clone the Repository
+# Clone repository
 git clone https://github.com/your-username/express-redis-starter.git
 cd express-redis-starter
 
-
-# 2️⃣ Install Dependencies
+# Install dependencies
 npm install
 
-
-# 3️⃣ Setup Environment Variables
-
-# Create a .env file using the example
+# Setup environment
 cp .env.example .env
 
-
-# Add your Redis and database configuration
 PORT=5000
 REDIS_HOST=localhost
 REDIS_PORT=6379
 REDIS_PASSWORD=
 
-
-# 4️⃣ Start Redis Server
-
-# Using Docker
+# Start Redis
 docker run -d -p 6379:6379 redis
-
-
-# Or run Redis locally
+# OR
 redis-server
 
-
-# 5️⃣ Run the Server
+# Run server
 npm run dev
 
-
-# -----------------------------------------------------------------------------
-# Server will be running at
-# -----------------------------------------------------------------------------
+# App URL
 http://localhost:5000
